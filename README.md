@@ -1,44 +1,45 @@
-## FrontEnd
 
-run npm install : to download the dependencies.
 
-In the project directory, you can run:
+# Project Setup Instructions
 
-## `npm start`
+## Frontend
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Run `npm install` to download the dependencies.
 
+2. In the project directory, execute:
+
+   ```bash
+   npm start
+3. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 
 ## Backend
 
-run npm install : to download the dependencies
+1. Run `npm install` to download the dependencies.
 
-##create database with the name `repairmate` before starting the backend application
+2. **Create Database:**
+   - Execute the following command to create a database named `repairmate` before starting the backend application:
 
-##Run the dump.sql file provided with the project to get the predefined data
-##cd to folder which contains dump.sql file and run the below Command
+     ```bash
+     mysql -u root -p -e "CREATE DATABASE repairmate;"
+     ```
 
-mysql -u root -p repairmate < dump.sql
+4. **Import Predefined Data:**
+   - Run the `dump.sql` file provided with the project to get the predefined data.
+   - Navigate to the folder containing `dump.sql` and execute the following command:
 
-
-## Signup with new user to start using the application
-
-We are using JWT token hence user must be created from the application interface
-
-`nodemon index.js`
-
-Runs the app in the development mode.
-http://localhost:9000
-
-Both MySQL and Mongo Connection included under /db directory in backend folder
+     ```bash
+     mysql -u root -p repairmate < dump.sql
+     ```
 
 
 
+## Commands to Run for Importing Required Packages (Python)
 
-## Commands need to Run to import all the required packages:
+Use the following commands to install the necessary Python packages:
 
+```bash
 python -m pip install faiss-cpu
 python -m pip install openai
 python -m pip install langchain
@@ -47,19 +48,44 @@ python -m pip install tiktoken
 python -m pip install numpy
 pip install googlemaps
 pip install geopy
+```
 
 
 
-## Database
+## Signup with a New User to Start Using the Application
 
-create database repairmate;
+- To begin using the application, sign up with a new user through the application interface.
 
-mysql -u root -p repairmate < dump.sql
+- **Note:** Since JWT tokens are used, users must be created from the application interface.
 
+```bash
+nodemon index.js
+```
 
 
 ## OpenAI API New Key (Backup-only)
 
-"----------------- USE YOUR KEY HERE ------------------"
-If the given API key in the code provided, in the file named "getRecommendedRepairmates.py" under backend/PythonScript then use the above new API key.
-os.environ["OPENAI_API_KEY"] = "" (add openAPI key here, sometime provided openAPI key might be invalidated in that case please create the new one)
+In case the provided API key in the code, located in the file named "getRecommendedRepairmates.py" under `backend/PythonScript`, is not valid, replace it with a new one.
+
+```python
+# Use your OpenAI API key here
+os.environ["OPENAI_API_KEY"] = "YOUR-KEY-HERE"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
