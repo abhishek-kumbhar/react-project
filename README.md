@@ -1,12 +1,15 @@
 ## FrontEnd
 
-run npm install : to download the dependencies
+run npm install : to download the dependencies.
 
 In the project directory, you can run:
 
-### `npm start`
+## `npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+
 
 ## Backend
 
@@ -22,16 +25,14 @@ mysql -u root -p repairmate < dump.sql
 
 ## Signup with new user to start using the application
 
-## We are using JWT token hence user must be created from the application interface
+We are using JWT token hence user must be created from the application interface
 
 `nodemon index.js`
 
 Runs the app in the development mode.
 http://localhost:9000
 
-##Both MySQL and Mongo Connection included under /db directory in backend folder
-
-##make sure to install the necessary libraries
+Both MySQL and Mongo Connection included under /db directory in backend folder
 
 
 
@@ -47,11 +48,15 @@ python -m pip install numpy
 pip install googlemaps
 pip install geopy
 
-## database
+
+
+## Database
 
 create database repairmate;
 
 mysql -u root -p repairmate < dump.sql
+
+
 
 ## OpenAI API New Key (Backup-only)
 
